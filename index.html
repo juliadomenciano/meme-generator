@@ -8,27 +8,45 @@
     <title>MEME GENERATOR</title>
 </head>
 <body>
-    <input type="text" id="text-input" maxlength="60">
-    <input type="file" id="meme-insert" accept="image/*" onchange="loadFile(event)">
-
+   <main>
+		<h1>MEME GENERATOR</h1>
+		<div class="phrase">
+			<h2>Write your meme phrase below</h2>
+			<div class="input-container">
+				<input class="text" type="text" id="text-input" maxlength="60">
+				<label for="meme-insert">
+					Upload Image:
+					<input type="file" id="meme-insert" accept="image/*" onchange="loadFile(event)">
+				</label>
+			</div>
+		</div>
+	
 		<div id="meme-image-container"><br><br>
 			<img src="" alt="" id="meme-image">
-			<p id="meme-text"></p><br>
+			<div class="meme-text-container">
+				<p id="meme-text"></p><br>
+			</div>
 
 		</div>
-		<p>CUSTOMIZAR BORDA</p>
-
-		<button id="fire">Fire</button>
-		<button id="water">Water</button>
-		<button id="earth">Earth</button><br><br>
-
-		<p>MEMES PRÉ PRONTOS</p><br>
-		<div id="images">
-			<img src="imgs/meme1.png" alt="" id="meme-1" class="img">
-			<img src="imgs/meme2.png" alt="" id="meme-2" class="img">
-			<img src="imgs/meme3.png" alt="" id="meme-3" class="img">
-			<img src="imgs/meme4.png" alt="" id="meme-4" class="img">
+		<div class="border-container">
+			<p class="border">Customize Border</p>
+		<div class="buttons">
+			<button id="fire">Fire</button>
+			<button id="water">Water</button>
+			<button id="earth">Earth</button>
 		</div>
+		</div>
+
+		<div class="meme-pictures">
+			<p>Preloaded meme pictures</p><br>
+			<div id="images">
+				<img src="imgs/meme1.png" alt="" id="meme-1" class="img">
+				<img src="imgs/meme2.png" alt="" id="meme-2" class="img">
+				<img src="imgs/meme3.png" alt="" id="meme-3" class="img">
+				<img src="imgs/meme4.png" alt="" id="meme-4" class="img">
+			</div>
+		</div>
+	 </main>
 
 		<script src="script.js"></script>
 </body>
